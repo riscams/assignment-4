@@ -1,0 +1,32 @@
+curl --request POST \
+  --url http://localhost:3000/ \
+  --header 'Content-Type: application/json' \
+  --header 'cookie: Bearer ' \
+  --cookie 'Bearer ' \
+  --data '{
+	"username" : "ica",
+	"password" : "123"
+}'
+
+
+curl --request POST \
+  --url http://localhost:3000/create-notes \
+  --header 'Content-Type: application/json' \
+  --header 'Cookies: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJpY2EiLCJpYXQiOjE2NzM1MTIxMjUsImV4cCI6MTY3MzU5ODUyNX0.u_HdL1Bd5G_po7UYTNCTz0nBQJbdq0J85T6ruLLhjYk' \
+  --cookie auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJpY2EiLCJpYXQiOjE2NzM1MTIxMjUsImV4cCI6MTY3MzU5ODUyNX0.u_HdL1Bd5G_po7UYTNCTz0nBQJbdq0J85T6ruLLhjYk \
+  --data '{
+	"title" : "Title",
+	"body" : "Body",
+	"type": "Private"
+}'
+
+curl --request GET \
+  --url http://localhost:3000/note/1 \
+  --header 'Content-Type: application/json' \
+  --header 'Cookies: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJpY2EiLCJpYXQiOjE2NzM1MTIxMjUsImV4cCI6MTY3MzU5ODUyNX0.u_HdL1Bd5G_po7UYTNCTz0nBQJbdq0J85T6ruLLhjYk' \
+  --cookie auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJpY2EiLCJpYXQiOjE2NzM1MTIxMjUsImV4cCI6MTY3MzU5ODUyNX0.u_HdL1Bd5G_po7UYTNCTz0nBQJbdq0J85T6ruLLhjYk \
+  --data '{
+	"title" : "Title",
+	"body" : "Body",
+	"type": "Private"
+}'
